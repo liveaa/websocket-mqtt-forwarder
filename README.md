@@ -24,6 +24,13 @@ $> java -jar target/wsmqttfwd-0.1-SNAPSHOT-jar-with-dependencies.jar
 
 ## How to use it ?
 
+```
+$> mvn clean compile assembly:single docker:build
+$> docker run --rm -ti sylvek/websocket-mqtt-forwarder 8081 localhost 1883
+```
+
+## How to tune it ?
+
 You just have to implement a Server, init it and start it, like that:
 
 ```
